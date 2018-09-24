@@ -8,16 +8,15 @@ const Discord = require('discord.js');
 // Create an instance of a Discord client
 const client = new Discord.Client();
 
-// The token of your bot - https://discordapp.com/developers/applications/me
-const token = 'NDI1MzIxNzU5MjQ0NDE5MDcy.DZF3bQ.LXzQ-dDz10h8j_1fwYVRuHwPgUI';
+// DISCORD_TOKEN: The token of your bot - https://discordapp.com/developers/applications/me
 
 // Log our bot in
-client.login(token);
+client.login(process.env.DISCORD_TOKEN);
 
 // Create an event listener for messages
 client.on('message', message => {
   if (message.content === 'edt week') {
-    message.channel.send('https://edt.grenoble-inp.fr/2018-2019/exterieur?clearTree=false&projectId=10&name=4APP&displayConfName=esisar_standard_impression');
+    message.channel.send('https://edt.grenoble-inp.fr/'+process.env.EDT_YEAR+'/exterieur?clearTree=false&projectId=10&name='+process.env.EDT_GROUP+'&displayConfName=esisar_standard_impression');
   }
   if (message.content === 'edt now') {
     message.channel.send('Je sais pas moi, demande à Fulget...');
