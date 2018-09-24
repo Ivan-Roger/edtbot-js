@@ -17,12 +17,12 @@ client.login(token);
 // Create an event listener for messages
 client.on('message', message => {
   if (message.content === 'edt week') {
-    message.channel.send('https://edt.grenoble-inp.fr/2017-2018/exterieur?clearTree=false&projectId=10&name=3APP&displayConfName=esisar_standard_impression');
+    message.channel.send('https://edt.grenoble-inp.fr/2018-2019/exterieur?clearTree=false&projectId=10&name=4APP&displayConfName=esisar_standard_impression');
   }
   if (message.content === 'edt now') {
-    message.channel.send('Je sais pas moi, demande à Siragusa...');
+    message.channel.send('Je sais pas moi, demande à Fulget...');
   }
-  if (message.content === 'edt gros') {
+  /*if (message.content === 'edt gros') {
     
         var ical = require('ical')
   , months = ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -40,13 +40,6 @@ client.on('message', message => {
       }
     });
 
-  }
+  }*/
   
-}); 
-
-client.on('message', message => {
-
-}); 
-  
-
-
+});
